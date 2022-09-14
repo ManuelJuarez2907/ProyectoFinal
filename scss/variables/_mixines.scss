@@ -1,0 +1,44 @@
+@mixin grillas ($header,$main,$footer,$pagina){
+    display: grid;
+    grid-template-rows: $header $main $footer;
+    grid-template-columns: 100%;
+    @if $pagina == "principal"{
+        grid-template-areas:"header"
+                            "main"
+                            "footer";
+    }
+    @else if $pagina == "contacto"{
+        grid-template-areas:"header"
+                            "main_contacto"
+                            "footer";
+    }
+    @else if $pagina == "especialidades"{
+        grid-template-areas:"header"
+                            "main_especialidades"
+                            "footer";
+    }
+    @else if $pagina == "faq"{
+        grid-template-areas:"header"
+                            "main_faq"
+                            "footer";
+    }
+    @else if $pagina == "sobrenosotros"{
+        grid-template-areas:"header"
+                            "main_sobrenosotros"
+                            "footer";
+    }
+    @else if $pagina == "reservatuturno"{
+        grid-template-areas:"header"
+                            "main_reservatuturno"
+                            "footer";
+    }
+}
+@mixin grilla_footer($foot, $color_dos, $color_uno, $tamanio_cuatro, $tipografia_tres){
+    display: grid;
+    grid-area: $foot;
+    background-color: $color_dos;
+    color: $color_uno;
+    font-size: $tamanio_cuatro;
+    font-weight: 525;
+    font-family: $tipografia_tres;
+}

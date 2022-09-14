@@ -1,0 +1,587 @@
+@import "variables/tipografias";
+@import "variables/tamanios";
+@import "variables/mixines";
+@import "variables/variables";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#body{
+    background-color: $color_tres;
+}
+
+h2{
+    font-family: $tipografia_uno;
+    font-size: $tamanio_uno;
+}
+.mapa{
+    height: 350px;
+    width: 350px;
+}
+@media only screen and (max-width:600px){
+    #grilla{
+        @include grillas(250px, 1000px, 1000px, principal)
+    }
+    
+    #grilla_contacto{
+        @include grillas(300px, 700px, 1000px,contacto)
+    }
+    #grilla_especialidades{
+        @include grillas(300px, 2000px, 1000px, especialidades)
+    }
+    #grilla_faq{
+        @include grillas(300px, 1400px, 1000px, faq)
+    }
+    #grilla_sobrenosotros{
+        @include grillas(300px, 1800px, 1000px, sobrenosotros)
+    }
+    #grilla_reservatuturno{
+        @include grillas(300px, 350px, 1000px, reservatuturno)
+    }
+    
+    /*HEADER*/
+    header{
+        grid-area: header;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+    .titulogrande{
+        font-family: $tipografia_dos;
+        font-size: 25px;
+        text-align: center;
+        width: 250px;
+        height: 20px;
+       
+    }
+    /*MAIN INDEX*/
+    main{
+        grid-area: main;
+    }
+    #grilla_home{
+        display: grid;
+        grid-template-rows: 15% 35% 15% 35%;
+        grid-template-columns: 90%;
+        grid-template-areas: "titulo1"
+                             "img1"
+                             "titulo2"
+                             "img2";
+        justify-content: space-around;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+    #titulo1{
+        grid-area: titulo1;
+    }
+    #carrusel1{
+        grid-area: img1;
+    }
+    #titulo2{
+        grid-area: titulo2;
+    }
+    #carrusel2{
+        grid-area: img2;
+    }
+    .imagenes{
+        height: 400px;
+        width: 400px;
+    }
+    #carousel-inner{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 350px;
+        box-sizing: content-box;
+    }
+    #carousel-inner2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 350px;
+        box-sizing: content-box;
+    }
+    /*MAIN CONTACTO*/
+    .main_contacto{
+        grid-area: main_contacto;
+        display: flex;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        background-color: $color_cuatro;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin: 10px;
+    }
+    .formuno{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin: 5px;
+    }
+    .separacion{
+        margin-left: $tamanio_cuatro;
+    }
+    .formdos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 5px;
+    }
+    .formtres{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    /*MAIN ESPECIALIDADES*/
+    .main_especialidades{
+        grid-area: main_especialidades;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tamanocajas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+    }
+    .tamanoimagen{
+        height: 65%;
+        width: 50%;
+    }
+    .contenidocajas{
+        text-align: justify;
+        margin-inline: 6px;
+    }
+    h2{
+        font-family: $tipografia_uno;
+        font-size: 25px;
+    }
+    /*MAIN FAQ*/
+    .main_faq{
+        grid-area: main_faq;
+        display: flex;        
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cajadepreguntas{
+        width: 550px;
+        height: 600px;
+    }
+    .preguntas{
+        font-family: 'Roboto', sans-serif;
+        font-size: $tamanio_cuatro;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;  
+    }
+    .respuestas{
+        font-family: $tipografia_cuatro;
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px; 
+    }
+    .cajadeimagen{
+        display: flex;
+        height: 800px;
+        width: 700px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #imagen1{
+        height: 60%;
+    }
+    /*MAIN SOBRE NOSOTROS*/
+   
+    #grilla_sobrenosotros_main{
+        display: grid;
+        grid-template-rows: 4% 9% 20% 4% 9% 20% 4% 9% 20%;
+        grid-template-columns: 90%;
+        grid-template-areas: "p1"
+                             "p4"
+                             "p7"
+                             "p2"
+                             "p5"
+                             "p8"
+                             "p3"
+                             "p6"
+                             "p9";
+        justify-content: center;
+        align-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+    #p1{
+        grid-area: p1;
+    }
+    #p2{
+        grid-area: p2;
+    }
+    #p3{
+        grid-area: p3;
+    }
+    #p4{
+        grid-area: p4;
+    }
+    #p5{
+        grid-area: p5;
+    }
+    #p6{
+        grid-area: p6;
+    }
+    .main_sobrenosotros{
+        grid-area: main_sobrenosotros;
+    }
+    /*MAIN RESERVA TU TURNO*/
+    .main_reservatuturno{
+        grid-area: main_reservatuturno;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*FOOTER*/
+    #grilla_footer{
+        @include grilla_footer(footer, $color_dos, $color_uno, $tamanio_cuatro, $tipografia_tres);
+        grid-template-rows: 15% 15% 15% 10% 40%;
+        grid-template-columns: 90%;
+        grid-template-areas: "foot1" 
+                             "foot2"
+                             "foot3"
+                             "foot4"
+                             "foot5";
+        justify-content: space-around;
+        align-content: center;
+    }
+    #foot1{
+        grid-area: foot1;
+    }
+    #foot2{
+        grid-area: foot2;
+    }
+    #foot3{
+        grid-area: foot3;
+    }
+    #foot4{
+        grid-area: foot4;
+    }
+    #foot5{
+        grid-area: foot5;
+    }
+}
+
+
+@media only screen and (min-width:600px){
+    #grilla{
+        @include grillas(300px, 1000px, 500px, principal)
+    }
+    #grilla_contacto{
+        @include grillas(200px, 700px, 500px,contacto)
+    }
+    #grilla_especialidades{
+        @include grillas(200px, 1000px, 500px, especialidades)
+    }
+    #grilla_faq{
+        @include grillas(300px, 1200px, 500px, faq)
+    }
+    #grilla_sobrenosotros{
+        @include grillas(300px, 600px, 500px, sobrenosotros)
+    }
+    #grilla_reservatuturno{
+        @include grillas(300px, 350px, 500px, reservatuturno)
+    }
+    
+    /*HEADER*/    
+    header{
+        grid-area: header;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+    .titulogrande{
+        font-family: $tipografia_dos;
+        font-size: 25px;
+        text-align: center;
+        text-justify: center;
+        width: 220px;
+        height: 20px;
+       
+    }
+    /*MAIN INDEX*/
+    main{
+        grid-area: main;
+    }
+    #grilla_home{
+        display: grid;
+        grid-template-rows: 10% 35% 10% 35%;
+        grid-template-columns: 70%;
+        grid-template-areas: "area1"
+                            "area2"
+                            "area3"
+                            "area4";
+        justify-content: center;
+        align-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+    #titulo1{
+        grid-area: area1;
+    }
+    #carrusel1{
+        grid-area: area2;
+    }
+    #titulo2{
+        grid-area: area3;
+    }
+    #carrusel2{
+        grid-area: area4;
+    }
+    .imagenes{
+        height: 250px;
+        width: 250px;
+    }
+    
+    #carousel-inner{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 350px;
+        box-sizing: content-box;
+    }
+    
+    #carousel-inner2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 350px;
+        box-sizing: content-box;
+    }
+    /*MAIN CONTACTO*/
+    .main_contacto{
+        grid-area: main_contacto;
+        display: flex;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        background-color: $color_cuatro;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .formuno{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin: 5px;
+    }
+    .separacion{
+        margin-left: 20px;
+    }
+    .formdos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 5px;
+    }
+    .formtres{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    /*MAIN ESPECIALIDADES*/
+    #grilla_esp_main{
+        display: grid;
+        grid-template-rows: 5% 45% 5% 45%;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-areas: "t1 t1 t1"
+                             "a1 a2 a3"
+                             "t2 t2 t2"
+                             "a4 a5 a6";
+        justify-content: center;
+        align-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+    #t1{
+        grid-area: t1;
+    }
+    #a1{
+        grid-area: a1;
+    }
+    #a2{
+        grid-area: a2;
+    }
+    #a3{
+        grid-area: a3;
+    }
+    #t2{
+        grid-area: t2;
+    }
+    #a4{
+        grid-area: a4;
+    }
+    #a5{
+        grid-area: a5;
+    }
+    #a6{
+        grid-area: a6;
+    }
+    .main_especialidades{
+        grid-area: main_especialidades;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tamanocajas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+    }
+    .tamanoimagen{
+        height: 65%;
+        width: 50%;
+    }
+    .contenidocajas{
+        text-align: justify;
+        margin-inline: 6px;
+    }
+    /*MAIN FAQ*/
+    .main_faq{
+        grid-area: main_faq;
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cajadepreguntas{
+        width: 500px;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    .preguntas{
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;   
+    }
+    .respuestas{
+        font-family: $tipografia_cuatro;
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .cajadeimagen{
+        display: flex;
+        height: 100%;
+        width: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #imagen1{
+        height: 60%;
+    }
+    /*MAIN SOBRE NOSOTROS*/
+    #grilla_sobrenosotros_main{
+        display: grid;
+        grid-template-rows: 15% 30% 50%;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-areas: "p1 p2 p3"
+                             "p4 p5 p6"
+                             "p7 p8 p8";
+        justify-content: center;
+        align-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+    #p1{
+        grid-area: p1;
+    }
+    #p2{
+        grid-area: p2;
+    }
+    #p3{
+        grid-area: p3;
+    }
+    #p4{
+        grid-area: p4;
+    }
+    #p5{
+        grid-area: p5;
+    }
+    #p6{
+        grid-area: p6;
+    }
+    .main_sobrenosotros{
+        grid-area: main_sobrenosotros;
+    }
+    /*MAIN RESERVA TU TURNO*/
+    .main_reservatuturno{
+        grid-area: main_reservatuturno;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*FOOTER*/
+    #grilla_footer{
+        @include grilla_footer(footer, $color_dos, $color_uno, $tamanio_cuatro, $tipografia_tres);
+        grid-template-rows: 10% 40% 40%;
+        grid-template-columns: 50% 40%;
+        grid-template-areas: "foot4 foot1"
+                            "foot5 foot2";
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    #foot1{
+        grid-area: foot1;
+    }
+    #foot2{
+        grid-area: foot2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #foot3{
+        grid-area: foot3;
+    }
+    #foot4{
+        grid-area: foot4;
+    }
+    #foot5{
+        grid-area: foot5;
+    }
+}
